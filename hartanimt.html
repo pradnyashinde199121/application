@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hartbeat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+    .wrapper{
+        width: 550px;
+        margin: 0 auto;
+        text-align: center;
+        min-height: 500px;
+        line-height: 500px;
+        height: auto;
+        font-size: 180px;
+    }
+    .wrapper i{
+        color: red;
+        animation: heartbeat 0.6s linear infinite;
+        margin-top: 40%;
+    }
+    @keyframes heartbeat{
+        0%{transform: scale(1,1)}
+        
+        50%{transform: scale(0.5,0.5)}
+        100%{transform: scale(0.8,0.8)}
+    }</style>
+</head>
+<body>
+    <div class="wrapper">
+        <i class="fa fa-heart"></i>
+    </div>
+</body>
+</html>

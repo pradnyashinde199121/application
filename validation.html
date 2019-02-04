@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+    <style>
+  body{ background-image: url(C:/Users/Amar/Desktop/op/reg.jpg);
+            background-size:cover; 
+            height: 100vh;
+            background-position: center;}
+
+ .login{width: 350px;
+            padding: 10% 0 0;
+            margin: auto;
+
+            }
+.form{
+    position: relative;
+    background: whitesmoke;
+    max-width: 400px;
+    padding: 45px;
+    text-align: center;
+}
+.form input{
+    outline: 1;
+    background: rgba(212, 201, 201, 0.822);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.form button{
+    outline: 0;
+    text-transform: uppercase;
+    width: 100%;
+    background: rgb(77, 189, 77);
+    padding: 14px;
+ cursor: pointer;
+ 
+}
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form">
+       <form name="validationform" action="login.html" class="reg-form" onsubmit="return validation(),checkedform(this)">
+           <input type="text" name="fname" placeholder="First Name" required><br><br>
+           <input type="text" name="mname" placeholder="Middle Name"required><br><br>
+           <input type="text" name="lname" placeholder="Last Name"required><br><br>
+           <input type="text" id="num" name="contact" placeholder="Contact No"required><br><br>
+           <input type="email" name="mailid" placeholder="abc@example.com"  required><br><br>
+           <input type="password" name="pass" placeholder="Password"required><br><br>
+           <input type="password" name="cpass" placeholder="Confirm Password"required><br><br>
+           <input type="text" id="adharno" name="adharno" placeholder="Adhar No" required><br><br>
+           <center><button>registor</button></center><br>
+       </form>
+    </div>
+    </div>
+    <script>
+        function validation() {
+            debugger;
+          var psw = document.validationform.pass.value;
+          var cpsw = document.validationform.cpass.value;
+          var cnum = document.validationform.contact.value;
+          var adhar = document.validationform.adharno.value;
+          if(cnum.length!=10 ) {
+            document.getElementById("num").innerHTML="Enter 10 digit Number only";
+            alert("Enter 10 digit Number only");
+            return false}
+            if( isNaN(cnum)) {
+            document.getElementById("num").innerHTML="Enter Number only";
+            alert("Enter Number only");
+            return false}
+            if( isNaN(adhar)) {
+            document.getElementById("adharno").innerHTML="Enter Number only";
+            alert("Enter Number only");
+            return false}  
+            if(adhar.length!=12 ) {
+            document.getElementById("adharno").innerHTML="Enter 12 digit Number only";
+            alert("Enter 12 digit Number only");
+            return false}
+           if(psw.length<6) {
+            alert("Passoword length should be greater than 6");
+            return false;
+          }else if(psw == cpsw) {
+            return true;
+          }else {
+            alert("Password Should be smilar");
+            return false;
+          }       
+          
+                     
+        }
+        
+      </script>
+</body>
+</html>
